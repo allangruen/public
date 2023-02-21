@@ -1,209 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TheCreator.ai - Launching Soon</title>
-    <style>
-      /* Style for the banner */
-      .banner {
-        background-color: #3F51B5;
-        color: white;
-        text-align: center;
-        padding: 50px;
-        font-size: 50px;
-        animation: fadein 3s;
-      }
-      
-      /* Animation for the banner */
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      /* Style for the feature section */
-      .feature {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      
-      /* Style for the feature cards */
-      .feature-card {
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        padding: 50px;
-        margin: 50px;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        animation: slidein 3s;
-        cursor: pointer;
-      }
-      
-      /* Animation for the feature cards */
-      @keyframes slidein {
-        from {
-          margin-top: -100%;
-        }
-        to {
-          margin-top: 0;
-        }
-      }
-      
-      /* Style for the feature card icons */
-      .feature-card i {
-        font-size: 50px;
-        margin-bottom: 20px;
-      }
-      
-      /* Style for the feature card titles */
-      .feature-card h2 {
-        margin-bottom: 20px;
-        font-size: 30px;
-      }
-      
-      /* Style for the feature card descriptions */
-      .feature-card p {
-        font-size: 20px;
-        line-height: 1.5;
-      }
-      
-      /* Style for the modal */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-      
-      /* Style for the modal content */
-      .modal-content {
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        padding: 50px;
-        margin: auto;
-        margin-top: 10%;
-        max-width: 800px;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        animation: slidein 3s;
-        position: relative;
-      }
-      
-      /* Style for the close button */
-      .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 30px;
-        color: #555555;
-        cursor: pointer;
-      }
-      
-      /* Animation for the modal */
-      @keyframes slidein {
-        from {
-          margin-top: -100%;
-        }
-        to {
-          margin-top: 0;
-        }
-      }
-      
-      /* Style for the footer */
-      .footer {
-        background-color: #212121;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        font-size: 20px;
-        animation: fadein 3s;
-      }
-      
-      /* Animation for the footer */
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="banner">
-      <h1>TheCreator.ai</h1>
-      <p>Launching Soon</p>
+<head>
+  <title>TheCreator.ai - Launching Soon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .banner {
+      background-color: #5C5AA7;
+      color: #fff;
+      text-align: center;
+      padding: 50px 0;
+    }
+    
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    
+    .feature {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+    }
+    
+    .feature-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+      width: 300px;
+      max-width: 90%;
+    }
+    
+    .feature-card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .feature-card i {
+      color: #5C5AA7;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      color: #5C5AA7;
+      font-size: 24px;
+      margin: 0;
+    }
+    
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    
+    .footer {
+      background-color: #5C5AA7;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>TheCreator.ai</h1>
+    <p>Launching Soon</p>
+  </div>
+  
+  <div class="feature">
+    <div class="feature-card">
+      <i class="fa fa-pencil"></i>
+      <h2>Create</h2>
+      <p>Get inspired with our endless library of content ideas.</p>
     </div>
     
-    <div class="feature">
-      <div class="feature-card" onclick="openModal('create')">
-        <i class="fa fa-pencil"></i>
-        <h2>Create</h2>
-        <p>Get inspired with our endless library of content ideas.</p>
-      </div>
-      
-      <div class="feature-card" onclick="openModal('plan')">
-        <i class="fa fa-list-alt"></i>
-        <h2>Plan</h2>
-        <p>Plan and organize your production schedule with ease.</p>
-      </div>
-      
-      <div class="feature-card" onclick="openModal('edit')">
-        <i class="fa fa-scissors"></i>
-        <h2>Edit</h2>
-        <p>Edit your videos quickly and efficiently with our tools.</p>
-      </div>
+    <div class="feature-card">
+      <i class="fa fa-list-alt"></i>
+      <h2>Plan</h2>
+      <p>Plan and organize your production schedule with ease.</p>
     </div>
     
-    <div id="create-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Create</h2>
-        <p>Get inspired with our endless library of content ideas.</p>
-      </div>
+    <div class="feature-card">
+      <i class="fa fa-scissors"></i>
+      <h2>Edit</h2>
+      <p>Edit your videos quickly and efficiently with our tools.</p>
     </div>
-    
-    <div id="plan-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Plan</h2>
-        <p>Plan and organize your production schedule with ease.</p>
-      </div>
-    </div>
-    
-    <div id="edit-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Edit</h2>
-        <p>Edit your videos quickly and efficiently with our tools.</p>
-      </div>
-    </div>
-    
-    <div class="footer">
-      <p>© 2023 TheCreator.ai. All Rights Reserved.</p>
-    </div>
-    
-    <script>
-      // Open the corresponding modal when a feature card is clicked
-      function openModal(modalId) {
-        var modal = document.getElementById(modalId + "-modal");
-        modal.style.display = "block";
-      }
-      
-      // Close the modal when the close button or outside of the modal is clicked
-      function closeModal() {
-        var modals = document.getElementsByClassName("modal");
-        for (var i = 0; i < modals.length; i++) {
-          modals[i].style.display = "none";
-        }
-      }
-    </script>
-  </body>
+  </div>
+  
+  <div class="footer">
+    <p>© 2023 TheCreator.ai. All Rights Reserved.</p>
+  </div>
+</body>
 </html>

@@ -1,94 +1,203 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Allan Gruen | Life Coach</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    /* Icon animations */
-    .icon {
-      position: relative;
-      display: inline-block;
-      margin: 20px;
-      cursor: pointer;
-      text-align: center;
-      transition: transform 0.5s;
-    }
-    
-    .icon i {
-      font-size: 40px;
-      color: #333;
-    }
-    
-    .icon:hover i {
-      transform: rotate(360deg);
-    }
-    
-    .icon .text {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 10px;
-      font-size: 18px;
-      text-align: center;
-      z-index: 1;
-    }
-    
-    .icon:hover .text {
-      display: block;
-    }
-    
-    /* Promotional blurbs */
-    .blurb {
-      display: inline-block;
-      margin: 20px;
-      padding: 20px;
-      width: 250px;
-      height: 250px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 10px;
-      font-size: 18px;
-      text-align: center;
-      transition: transform 0.5s;
-    }
-    
-    .blurb:hover {
-      transform: scale(1.1);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Welcome to Allan Gruen | Life Coach</h1>
-  </header>
-  <main>
-    <div class="icon">
-      <i class="fas fa-users"></i>
-      <div class="text">Get a personalized coaching experience tailored to your needs and goals</div>
+  <head>
+    <title>Allan Gruen | Life Coach</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #2a2a2a;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .nav-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 1.5rem;
+      }
+
+      .nav-link:hover {
+        color: #f9a825;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 2rem;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        margin: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s;
+        width: 300px;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .card:hover .promo {
+        color: #f9a825;
+      }
+
+      .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .promo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta {
+        background-color: #f9a825;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+      }
+
+      .cta:hover {
+        background-color: #e69107;
+      }
+
+      footer {
+        background-color: #2a2a2a;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .footer-text {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Allan Gruen</a>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="icon">
-      <i class="fas fa-book"></i>
-      <div class="text">Discover your life purpose and find meaning in your personal and professional life</div>
+
+    <div class="hero">
+      <h1>Welcome to Allan Gruen Coaching</h1>
+      <p>Your life is precious. So is your time. With the guidance of a skilled coach, you can confidently and successfully reach your goals, be they in life purpose, spiritual development or marriage.</p>
+      <a href="#" class="cta">Hire Allan</a>
     </div>
-    <div class="icon">
-      <i class="fas fa-heart"></i>
-      <div class="text">Strengthen your relationships and cultivate deeper connections with loved ones</div>
+
+    <div class="benefits">
+      <h2>Why Choose Allan Gruen Coaching?</h2>
+      <div class="benefit-icon">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916137.svg">
+        <p>Years of experience</p>
+      </div>
+      <div class="benefit-icon">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916131.svg">
+        <p>Compassionate approach</p>
+      </div>
+      <div class="benefit-icon">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916142.svg">
+        <p>Proven track record</p>
+      </div>
     </div>
-    <div class="blurb">
-      <h2>Transform your life with Allan Gruen</h2>
-      <p>With years of experience and a compassionate approach, Allan Gruen can help you overcome challenges and achieve your goals. Whether you're seeking guidance in finding your life purpose, improving your relationships, or navigating a major life transition, Allan is here to support and empower you every step of the way. Book your first session today and start living your best life!</p>
+
+    <div class="blurbs">
+      <h3>What our clients say about Allan:</h3>
+      <div class="blurb">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916155.svg">
+        <p>"I've worked with Allan for over a year now and his coaching has been invaluable in helping me achieve my goals. I highly recommend him to anyone looking for a life coach."</p>
+        <p class="author">- Jane D.</p>
+      </div>
+      <div class="blurb">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916148.svg">
+        <p>"Allan has been instrumental in helping me improve my marriage and bring my relationship with my spouse to the next level. He's an amazing coach!"</p>
+        <p class="author">- John S.</p>
+      </div>
+      <div class="blurb">
+        <img src="https://image.flaticon.com/icons/svg/2916/2916154.svg">
+        <p>"I came to Allan feeling lost and unsure about my life direction. With his guidance, I was able to discover my life purpose and start living a more fulfilling life."</p>
+        <p class="author">- Sarah M.</p>
+      </div>
     </div>
-  </main>
-  <footer>
-    <p>&copy; 2023 Allan Gruen. All rights reserved.</p>
-  </footer>
-</body>
+
+        <div class="contact">
+          <h4>Contact Allan Gruen Coaching Today</h4>
+          <p>Ready to take your life to the next level? Contact Allan Gruen Coaching today to get started on your journey to success!</p>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <p>&copy; 2023 Allan Gruen Coaching. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const icons = document.querySelectorAll('.icon');
+
+      icons.forEach(icon => {
+        icon.addEventListener('mouseover', () => {
+          icon.children[1].classList.add('show');
+        });
+
+        icon.addEventListener('mouseleave', () => {
+          icon.children[1].classList.remove('show');
+        });
+      });
+    </script>
+  </body>
 </html>

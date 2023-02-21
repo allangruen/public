@@ -9,13 +9,14 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #1c1c1c;
     }
     
     .banner {
-      background-color: #5C5AA7;
       color: #fff;
       text-align: center;
       padding: 50px 0;
+      position: relative;
     }
     
     h1 {
@@ -32,8 +33,8 @@
     }
     
     .feature-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
+      background-color: #2b2b2b;
+      border: 1px solid #4d4d4d;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       margin: 20px;
       padding: 20px;
@@ -41,6 +42,7 @@
       transition: box-shadow 0.3s;
       width: 300px;
       max-width: 90%;
+      color: #fff;
     }
     
     .feature-card:hover {
@@ -65,7 +67,6 @@
     }
     
     .footer {
-      background-color: #5C5AA7;
       color: #fff;
       text-align: center;
       padding: 20px 0;
@@ -77,36 +78,101 @@
     .footer p {
       margin: 0;
     }
+
+/* Futuristic animated background */
+    #background-wrap {
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    
+    .bubble {
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    .bubble:nth-child(1) {
+      width: 40px;
+      height: 40px;
+      left: 20%;
+      bottom: -20%;
+      animation: bubble-rise 10s linear infinite;
+    }
+    
+    .bubble:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      left: 70%;
+      bottom: -10%;
+      animation: bubble-rise 15s linear infinite;
+    }
+    
+    .bubble:nth-child(3) {
+      width: 20px;
+      height: 20px;
+      left: 90%;
+      bottom: 5%;
+      animation: bubble-rise 20s linear infinite;
+    }
+    
+    .bubble:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      left: 40%;
+      bottom: -20%;
+      animation: bubble-rise 12s linear infinite;
+    }
+    
+    @keyframes bubble-rise {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(0, -2000px);
+      }
+    }
   </style>
 </head>
 <body>
+  <div id="background-wrap">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
   <div class="banner">
     <h1>TheCreator.ai</h1>
+    <p>Your home base for YouTube content creation</p>
     <p>Launching Soon</p>
   </div>
-  
+
   <div class="feature">
     <div class="feature-card">
-      <i class="fa fa-pencil"></i>
-      <h2>Create</h2>
-      <p>Get inspired with our endless library of content ideas.</p>
+      <i class="fas fa-lightbulb"></i>
+      <h2>Idea Generation</h2>
+      <p>Find inspiration and discover new ideas for your YouTube channel</p>
     </div>
     
     <div class="feature-card">
-      <i class="fa fa-list-alt"></i>
-      <h2>Plan</h2>
-      <p>Plan and organize your production schedule with ease.</p>
+      <i class="fas fa-cogs"></i>
+      <h2>Full Production Plan</h2>
+      <p>Create a full production plan for your video, from script to post-production</p>
     </div>
     
     <div class="feature-card">
-      <i class="fa fa-scissors"></i>
-      <h2>Edit</h2>
-      <p>Edit your videos quickly and efficiently with our tools.</p>
+      <i class="fas fa-edit"></i>
+      <h2>Video Editing</h2>
+      <p>Edit your videos in a few clicks with our easy-to-use video editing tool</p>
     </div>
   </div>
-  
+
   <div class="footer">
-    <p>© 2023 TheCreator.ai. All Rights Reserved.</p>
+    <p>&copy; 2023 TheCreator.ai. All rights reserved.</p>
   </div>
 </body>
 </html>

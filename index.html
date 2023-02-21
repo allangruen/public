@@ -130,6 +130,19 @@ function sendForm() {
   document.getElementById("year").innerHTML = currentYear;
 </script>	
 	
+	
+  <script>
+    window.onload = function() {
+      function getCurrentYear() {
+        var year = new Date().getFullYear();
+        document.getElementById("current-year").textContent = year;
+      }
+
+      getCurrentYear();
+    };
+  </script>
+	
+	
 </head>
 <body>
 	<header>
@@ -241,6 +254,6 @@ function sendForm() {
 
 <footer class="footer">
   <div class="container">
-    <p>&copy; <span id="year"></span> 2023 Allan Gruen's Coaching! All rights reserved.</p>
+    <p>&copy; <span id="current-year"></span> 2023 Allan Gruen's Coaching!! All rights reserved.</p>
   </div>
 </footer>

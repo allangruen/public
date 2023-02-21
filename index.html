@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to Allan Gruen's Home Page</title>
+    <title>TheCreator.ai - Launching Soon</title>
     <style>
       /* Style for the banner */
       .banner {
-        background-color: #4CAF50;
+        background-color: #3F51B5;
         color: white;
         text-align: center;
         padding: 50px;
@@ -23,14 +23,26 @@
         }
       }
       
-      /* Style for the welcome message */
-      .welcome {
-        text-align: center;
-        font-size: 30px;
+      /* Style for the content section */
+      .content {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      /* Style for the feature cards */
+      .feature {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 50px;
+        margin: 50px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
         animation: slidein 3s;
       }
       
-      /* Animation for the welcome message */
+      /* Animation for the feature cards */
       @keyframes slidein {
         from {
           margin-top: -100%;
@@ -39,12 +51,44 @@
           margin-top: 0;
         }
       }
+      
+      /* Style for the footer */
+      .footer {
+        background-color: #212121;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        animation: fadein 3s;
+      }
+      
+      /* Animation for the footer */
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="banner">Welcome to Allan Gruen's Home Page</div>
-    <div class="welcome">
-      <p>Hello and welcome to my home page! My name is Allan Gruen and I am a software engineer based in California. On this website, you will find information about me, my work, and my interests. Thank you for stopping by and I hope you enjoy your visit!</p>
+    <div class="banner">TheCreator.ai - Launching Soon</div>
+    <div class="content">
+      <div class="feature">
+        <h2>Formulate Content Ideas</h2>
+        <p>TheCreator.ai will provide you with personalized content ideas based on your niche and audience, saving you hours of brainstorming time.</p>
+      </div>
+      <div class="feature">
+        <h2>Create Production Plans</h2>
+        <p>With TheCreator.ai, you can easily create a full production plan for your videos, including scriptwriting, storyboarding, and shot lists.</p>
+      </div>
+      <div class="feature">
+        <h2>Edit Your Videos</h2>
+        <p>TheCreator.ai will also provide you with professional-grade video editing tools, so you can create high-quality videos without spending hours in post-production.</p>
+      </div>
     </div>
+    <div class="footer">© 2023 TheCreator.ai. All rights reserved.</div>
   </body>
 </html>

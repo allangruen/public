@@ -86,8 +86,54 @@
 			margin: 0;
 			font-size: 14px;
 		}
+
+		/* Media queries */
+
+		/* Tablets and smaller screens */
+		@media (max-width: 768px) {
+			header {
+				flex-direction: column;
+			}
+
+			header a.logo {
+				margin: 0 0 10px 0;
+			}
+
+			header nav {
+				margin-top: 10px;
+			}
+
+			header nav a {
+				display: block;
+				margin: 10px 0;
+			}
+
+			section {
+				text-align: center;
+			}
+		}
+
+		/* Mobile screens */
+		@media (max-width: 480px) {
+			h1 {
+				font-size: 28px;
+			}
+
+			h2 {
+				font-size: 20px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+
+			a.button {
+				font-size: 16px;
+			}
+		}
 	</style>
-<script>
+	<script>
+		
 function sendForm() {
   // Get the values of the form inputs
   const name = document.getElementById('name').value;
@@ -117,97 +163,3 @@ function sendForm() {
   };
   xhr.send(JSON.stringify(data));
 }
-</script>
-	
-</head>
-<body>
-	<header>
-		<a href="#" class="logo">Allan Gruen</a>
-		<nav>
-			<a href="#about">About</a>
-			<a href="#services">Services</a>
-			<a href="#testimonials">Testimonials</a>
-			<a href="#contact">Contact</a>
-		</nav>
-	</header>
-	<main>
-		<section id="about">
-			<h1>About Allan Gruen's Coaching</h1>
-			<p>Allan Gruen is a life purpose, spiritual, and marriage life coach with over 2 decades of experience helping clients achieve their goals and live happy, fulfilling lives. With his compassionate and personalized approach, Allan has helped hundreds of clients find their life's purpose, deepen their spiritual practice, and improve their relationships.</p>
-			<p>If you're feeling lost, stuck, or unfulfilled in any area of your life, Allan can help you gain clarity and take action to move forward.</p>
-			<a href="#contact" class="button">Schedule a free consultation</a>
-		</section>
-
-<section id="services">
-  <div class="container">
-    <h2>What Allan Offers</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-          <h3>Life Purpose Coaching</h3>
-          <p class="text-muted">Discover your life's purpose and learn how to make it a reality.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-          <h3>Spiritual Coaching</h3>
-          <p class="text-muted">Connect with your inner self and deepen your spiritual practice.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-          <h3>Marriage Life Coaching</h3>
-          <p class="text-muted">Strengthen your relationship and improve your communication with your partner.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials">
-  <div class="container">
-    <h2>Testimonials</h2>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <div class="testimonial">
-          <p class="lead">"Allan Gruen's Coaching has been an incredible resource for me. Allan has helped me discover my life purpose and given me the tools to pursue it with confidence. I would highly recommend his services to anyone looking to take their life to the next level."</p>
-          <p class="author">- Sarah T.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-	
-<section id="contact">
-  <div class="container">
-    <h2>Good decisions start now! <br> Contact Allan Gruen for Coaching Today.</h2>
-    <form id="contact-form" 
-	action="https://formspree.io/f/xeqwgrqn"
-	method="POST"
-    >
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-<br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-<br>
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
-<br>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-<br>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</section>
-			
-
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2023 Allan Gruen's Coaching. All rights reserved.</p>
-  </div>
-</footer>

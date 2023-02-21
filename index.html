@@ -1,178 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TheCreator.ai - Launching Soon</title>
+  <title>Allan Gruen | Life Coach</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1c1c1c;
-    }
-    
-    .banner {
-      color: #fff;
-      text-align: center;
-      padding: 50px 0;
+    /* Icon animations */
+    .icon {
       position: relative;
+      display: inline-block;
+      margin: 20px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.5s;
     }
     
-    h1 {
-      font-size: 48px;
-      margin: 0;
+    .icon i {
+      font-size: 40px;
+      color: #333;
     }
     
-    .feature {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 50px 0;
+    .icon:hover i {
+      transform: rotate(360deg);
     }
     
-    .feature-card {
-      background-color: #2b2b2b;
-      border: 1px solid #4d4d4d;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .icon .text {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 18px;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .icon:hover .text {
+      display: block;
+    }
+    
+    /* Promotional blurbs */
+    .blurb {
+      display: inline-block;
       margin: 20px;
       padding: 20px;
-      text-align: center;
-      transition: box-shadow 0.3s;
-      width: 300px;
-      max-width: 90%;
+      width: 250px;
+      height: 250px;
+      background-color: #333;
       color: #fff;
-    }
-    
-    .feature-card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-    
-    .feature-card i {
-      color: #5C5AA7;
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    
-    h2 {
-      color: #5C5AA7;
-      font-size: 24px;
-      margin: 0;
-    }
-    
-    p {
+      border-radius: 10px;
       font-size: 18px;
-      margin: 20px 0;
-    }
-    
-    .footer {
-      color: #fff;
       text-align: center;
-      padding: 20px 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      transition: transform 0.5s;
     }
     
-    .footer p {
-      margin: 0;
-    }
-
-/* Futuristic animated background */
-    #background-wrap {
-      position: fixed;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-    
-    .bubble {
-      background: #333;
-      border-radius: 50%;
-      position: absolute;
-    }
-    
-    .bubble:nth-child(1) {
-      width: 40px;
-      height: 40px;
-      left: 20%;
-      bottom: -20%;
-      animation: bubble-rise 10s linear infinite;
-    }
-    
-    .bubble:nth-child(2) {
-      width: 80px;
-      height: 80px;
-      left: 70%;
-      bottom: -10%;
-      animation: bubble-rise 15s linear infinite;
-    }
-    
-    .bubble:nth-child(3) {
-      width: 20px;
-      height: 20px;
-      left: 90%;
-      bottom: 5%;
-      animation: bubble-rise 20s linear infinite;
-    }
-    
-    .bubble:nth-child(4) {
-      width: 100px;
-      height: 100px;
-      left: 40%;
-      bottom: -20%;
-      animation: bubble-rise 12s linear infinite;
-    }
-    
-    @keyframes bubble-rise {
-      from {
-        transform: translate(0, 0);
-      }
-      to {
-        transform: translate(0, -2000px);
-      }
+    .blurb:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <div id="background-wrap">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </div>
-
-  <div class="banner">
-    <h1>TheCreator.ai</h1>
-    <p>Your home base for YouTube content creation</p>
-    <p>Launching Soon</p>
-  </div>
-
-  <div class="feature">
-    <div class="feature-card">
-      <i class="fas fa-lightbulb"></i>
-      <h2>Idea Generation</h2>
-      <p>Find inspiration and discover new ideas for your YouTube channel</p>
+  <header>
+    <h1>Welcome to Allan Gruen | Life Coach</h1>
+  </header>
+  <main>
+    <div class="icon">
+      <i class="fas fa-users"></i>
+      <div class="text">Get a personalized coaching experience tailored to your needs and goals</div>
     </div>
-    
-    <div class="feature-card">
-      <i class="fas fa-cogs"></i>
-      <h2>Full Production Plan</h2>
-      <p>Create a full production plan for your video, from script to post-production</p>
+    <div class="icon">
+      <i class="fas fa-book"></i>
+      <div class="text">Discover your life purpose and find meaning in your personal and professional life</div>
     </div>
-    
-    <div class="feature-card">
-      <i class="fas fa-edit"></i>
-      <h2>Video Editing</h2>
-      <p>Edit your videos in a few clicks with our easy-to-use video editing tool</p>
+    <div class="icon">
+      <i class="fas fa-heart"></i>
+      <div class="text">Strengthen your relationships and cultivate deeper connections with loved ones</div>
     </div>
-  </div>
-
-  <div class="footer">
-    <p>&copy; 2023 TheCreator.ai. All rights reserved.</p>
-  </div>
+    <div class="blurb">
+      <h2>Transform your life with Allan Gruen</h2>
+      <p>With years of experience and a compassionate approach, Allan Gruen can help you overcome challenges and achieve your goals. Whether you're seeking guidance in finding your life purpose, improving your relationships, or navigating a major life transition, Allan is here to support and empower you every step of the way. Book your first session today and start living your best life!</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Allan Gruen. All rights reserved.</p>
+  </footer>
 </body>
 </html>

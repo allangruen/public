@@ -23,89 +23,26 @@
         }
       }
       
-      /* Style for the feature section */
-      .feature {
+      /* Style for the content section */
+      .content {
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
       
       /* Style for the feature cards */
-      .feature-card {
+      .feature {
         background-color: #FFFFFF;
         border-radius: 10px;
         padding: 50px;
         margin: 50px;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
         animation: slidein 3s;
-        cursor: pointer;
       }
       
       /* Animation for the feature cards */
-      @keyframes slidein {
-        from {
-          margin-top: -100%;
-        }
-        to {
-          margin-top: 0;
-        }
-      }
-      
-      /* Style for the feature card icons */
-      .feature-card i {
-        font-size: 50px;
-        margin-bottom: 20px;
-      }
-      
-      /* Style for the feature card titles */
-      .feature-card h2 {
-        margin-bottom: 20px;
-        font-size: 30px;
-      }
-      
-      /* Style for the feature card descriptions */
-      .feature-card p {
-        font-size: 20px;
-        line-height: 1.5;
-      }
-      
-      /* Style for the modal */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-      
-      /* Style for the modal content */
-      .modal-content {
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        padding: 50px;
-        margin: auto;
-        margin-top: 10%;
-        max-width: 800px;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        animation: slidein 3s;
-        position: relative;
-      }
-      
-      /* Style for the close button */
-      .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 30px;
-        color: #555555;
-        cursor: pointer;
-      }
-      
-      /* Animation for the modal */
       @keyframes slidein {
         from {
           margin-top: -100%;
@@ -128,4 +65,30 @@
       /* Animation for the footer */
       @keyframes fadein {
         from {
-          opacity: 
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">TheCreator.ai - Launching Soon</div>
+    <div class="content">
+      <div class="feature">
+        <h2>Formulate Content Ideas</h2>
+        <p>TheCreator.ai will provide you with personalized content ideas based on your niche and audience, saving you hours of brainstorming time.</p>
+      </div>
+      <div class="feature">
+        <h2>Create Production Plans</h2>
+        <p>With TheCreator.ai, you can easily create a full production plan for your videos, including scriptwriting, storyboarding, and shot lists.</p>
+      </div>
+      <div class="feature">
+        <h2>Edit Your Videos</h2>
+        <p>TheCreator.ai will also provide you with professional-grade video editing tools, so you can create high-quality videos without spending hours in post-production.</p>
+      </div>
+    </div>
+    <div class="footer">© 2023 TheCreator.ai. All rights reserved.</div>
+  </body>
+</html>

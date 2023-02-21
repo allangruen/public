@@ -126,7 +126,8 @@ function sendForm() {
 </script>
 	
 <script>
-  document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
+  document.getElementById("year").innerHTML = currentYear;
 </script>	
 	
 </head>
@@ -240,6 +241,6 @@ function sendForm() {
 
 <footer class="footer">
   <div class="container">
-    <p>&copy; &copy; <span id="currentYear"></span> Allan Gruen's Coaching!! All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Allan Gruen's Coaching! All rights reserved.</p>
   </div>
 </footer>

@@ -87,6 +87,38 @@
 			font-size: 14px;
 		}
 	</style>
+<script>
+function sendForm() {
+  // Get the values of the form inputs
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // Send the form data to your email using a service like Formspree
+  const xhr = new XMLHttpRequest();
+  const url = 'https://formspree.io/allan@allangruen.com';
+  xhr.open('POST', url);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // Success! Do something to notify the user
+      alert('Thanks for reaching out! We will get back to you soon.');
+    } else if (xhr.readyState === 4 && xhr.status !== 200) {
+      // Something went wrong, display an error message
+      alert('There was an error submitting your form. Please try again later.');
+    }
+  };
+  const data = {
+    name,
+    email,
+    subject,
+    message
+  };
+  xhr.send(JSON.stringify(data));
+}
+</script>
+	
 </head>
 <body>
 	<header>
@@ -177,38 +209,24 @@
 </section>
 		
 		
-function sendForm() {
-  // Get the values of the form inputs
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
 
-  // Send the form data to your email using a service like Formspree
-  const xhr = new XMLHttpRequest();
-  const url = 'https://formspree.io/allan@allangruen.com';
-  xhr.open('POST', url);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      // Success! Do something to notify the user
-      alert('Thanks for reaching out! We will get back to you soon.');
-    } else if (xhr.readyState === 4 && xhr.status !== 200) {
-      // Something went wrong, display an error message
-      alert('There was an error submitting your form. Please try again later.');
-    }
-  };
-  const data = {
-    name,
-    email,
-    subject,
-    message
-  };
-  xhr.send(JSON.stringify(data));
-}
 
 		
-<button type="button" onclick="sendForm()">Send</button>
+<form id="contact-form" onsubmit="sendForm(); return false;">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" required>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+  
+  <button type="submit">Submit</button>
+</form>
 		
 		
 
